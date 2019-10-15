@@ -24,23 +24,39 @@
       body {
         font-family: Inter, X-LocaleSpecific, sans-serif;
         -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        flex-direction: column;
       }
       .outer-content-container {
         width: 100%;
         background: #fff;
         padding-bottom: 1em;
+        flex: 1 0 auto;
       }
-      .logo {
-        margin-top: 28px;
-      }
+
       .content-container {
         max-width: 1228px;
         margin: 0 auto;
       }
+      header.content-container {
+        height: 3.75em;
+      }
+
+      header.content-container .logo {
+        margin-top: 28px;
+      }
+
+      main.content-container {
+        min-height: calc(100% - 3em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
       .main-ff-image {
         width: 10em;
         display: block;
-        margin: 6em auto 0 auto;
+        margin: 8em auto 0 auto;
       }
       .main-ff-content {
         margin: 2em auto;
@@ -51,9 +67,9 @@
         display: block;
       }
       footer {
-        position: absolute;
-        left: 0;
-        right: 0;
+        flex-shrink: 0;
+
+        width: 100%;
       }
     </style>
     <style>
@@ -456,9 +472,6 @@
     <footer>
       <div class="content-container mzp-l-content">
         <nav class="mzp-c-footer-primary">
-          <div class="mzp-c-footer-primary-logo">
-            <a href="/en-US/" data-link-type="footer" data-link-name="Mozilla">Mozilla</a>
-          </div>
           <div class="mzp-c-footer-sections">
             <section class="mzp-c-footer-section">
               <h5 class="mzp-c-footer-heading">
@@ -466,7 +479,10 @@
               </h5>
               <ul class="mzp-c-footer-list">
                 <li>
-                  <a href="/en-US/about/" data-link-type="footer" data-link-name="About"
+                  <a
+                    href="https://www.mozilla.org/en-US/about/"
+                    data-link-type="footer"
+                    data-link-name="About"
                     >About</a
                   >
                 </li>
@@ -495,7 +511,7 @@
               <ul class="mzp-c-footer-list">
                 <li>
                   <a
-                    href="/en-US/firefox/channel/desktop/"
+                    href="https://www.mozilla.org/en-US/firefox/channel/desktop/"
                     data-link-type="footer"
                     data-link-name="Test New Features"
                     >Test New Features</a
@@ -526,7 +542,7 @@
               <ul class="mzp-c-footer-list">
                 <li>
                   <a
-                    href="/en-US/privacy/"
+                    href="https://www.mozilla.org/en-US/privacy/"
                     data-link-type="footer"
                     data-link-name="Privacy"
                     >Privacy</a
@@ -534,7 +550,7 @@
                 </li>
                 <li>
                   <a
-                    href="/en-US/contact/"
+                    href="https://www.mozilla.org/en-US/contact/"
                     data-link-type="footer"
                     data-link-name="Contact Us"
                     >Contact</a
@@ -592,7 +608,7 @@
             <p class="mzp-c-footer-license">
               Visit
               <a
-                href="/en-US/"
+                href="https://www.mozilla.org/en-US/"
                 data-link-type="footer"
                 data-link-name="Mozilla Corporation"
                 >Mozilla Corporation’s</a
@@ -606,19 +622,24 @@
                 >Mozilla Foundation</a
               >.<br />Portions of this content are ©1998–2019 by individual mozilla.org
               contributors. Content available under a
-              <a rel="license" href="/en-US/foundation/licensing/website-content/"
+              <a
+                rel="license"
+                href="https://www.mozilla.org/en-US/foundation/licensing/website-content/"
                 >Creative Commons license</a
               >.
             </p>
             <ul class="mzp-c-footer-terms">
               <li>
-                <a href="/en-US/privacy/" data-link-type="footer" data-link-name="Privacy"
+                <a
+                  href="https://www.mozilla.org/en-US/privacy/"
+                  data-link-type="footer"
+                  data-link-name="Privacy"
                   >Privacy</a
                 >
               </li>
               <li>
                 <a
-                  href="/en-US/privacy/websites/"
+                  href="https://www.mozilla.org/en-US/privacy/websites/"
                   data-link-type="footer"
                   data-link-name="Privacy"
                   >Website Privacy Notice</a
@@ -626,7 +647,7 @@
               </li>
               <li>
                 <a
-                  href="/en-US/privacy/websites/#cookies"
+                  href="https://www.mozilla.org/en-US/privacy/websites/#cookies"
                   data-link-type="footer"
                   data-link-name="Cookies"
                   >Cookies</a
@@ -634,7 +655,7 @@
               </li>
               <li>
                 <a
-                  href="/en-US/about/legal/"
+                  href="https://www.mozilla.org/en-US/about/legal/"
                   data-link-type="footer"
                   data-link-name="Legal"
                   >Legal</a
@@ -642,7 +663,7 @@
               </li>
               <li>
                 <a
-                  href="/en-US/about/governance/policies/participation/"
+                  href="https://www.mozilla.org/en-US/about/governance/policies/participation/"
                   data-link-type="footer"
                   data-link-name="Community Participation Guidelines"
                   >Community Participation Guidelines</a
